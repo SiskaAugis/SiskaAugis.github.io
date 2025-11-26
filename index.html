@@ -38,6 +38,7 @@
   ======================================================== -->
 </head>
 
+
 <body class="index-page">
 
   <header id="header" class="header dark-background d-flex flex-column justify-content-center">
@@ -107,7 +108,7 @@
                 <p class="description">CV/gyvenimo aprašymas</p>
 
                 <div class="hero-actions">
-                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                  <a href="#portfolio" class="btn btn-primary view-work-btn">View My Work</a>
                   <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
 
@@ -224,16 +225,18 @@
                 </div>
               </div>
 
-              <div class="cta-section">
-                <a href="#" class="btn btn-primary">
-                  <i class="bi bi-download"></i>
-                  Download Resume
-                </a>
-                <a href="#" class="btn btn-outline">
-                  <i class="bi bi-chat-dots"></i>
-                  Let's Talk
-                </a>
-              </div>
+<div class="cta-section">
+  <a href="#" class="btn btn-primary">
+    <i class="bi bi-download"></i>
+    Download Resume
+  </a>
+  
+  <!-- ČIA PRIDĖJAU 'flip-btn' KLASĘ -->
+  <a href="#" class="btn btn-outline flip-btn">
+    <i class="bi bi-chat-dots"></i>
+    Let's Talk
+  </a>
+</div>
             </div>
           </div>
         </div>
@@ -726,226 +729,77 @@
 
 </section><!-- /Services Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="testimonial-masonry">
-
-          <div class="testimonial-item" data-aos="fade-up">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Implementing innovative strategies has revolutionized our approach to market challenges and competitive positioning.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-7.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Rachel Bennett</h3>
-                  <span class="position">Strategy Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Exceptional service delivery and innovative solutions have transformed our business operations, leading to remarkable growth and enhanced customer satisfaction across all touchpoints.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-7.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Daniel Morgan</h3>
-                  <span class="position">Chief Innovation Officer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Strategic partnership has enabled seamless digital transformation and operational excellence.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-8.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Emma Thompson</h3>
-                  <span class="position">Digital Lead</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Professional expertise and dedication have significantly improved our project delivery timelines and quality metrics.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-8.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Christopher Lee</h3>
-                  <span class="position">Technical Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="400">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Collaborative approach and industry expertise have revolutionized our product development cycle, resulting in faster time-to-market and increased customer engagement levels.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-9.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Olivia Carter</h3>
-                  <span class="position">Product Manager</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="500">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Innovative approach to user experience design has significantly enhanced our platform's engagement metrics and customer retention rates.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-13.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Nathan Brooks</h3>
-                  <span class="position">UX Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
+<form id="manoKontaktųForma" class="p-4 shadow-sm bg-white rounded">
+    <div class="row gy-4">
+        
+        <!-- Vardas ir Pavardė -->
+        <div class="col-md-6">
+            <label for="vardas" class="form-label">Vardas</label>
+            <input type="text" name="vardas" id="vardas" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+            <label for="pavarde" class="form-label">Pavardė</label>
+            <input type="text" name="pavarde" id="pavarde" class="form-control" required>
         </div>
 
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row g-4 g-lg-5">
-          <div class="col-lg-5">
-            <div class="info-box">
-              <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <div class="content">
-                  <h4>Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-telephone"></i>
-                </div>
-                <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-envelope"></i>
-                </div>
-                <div class="content">
-                  <h4>Email Address</h4>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="contact-form">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
-
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
-          </div>
-
+        <!-- El. paštas ir Telefonas -->
+        <div class="col-md-6">
+            <label for="email" class="form-label">El. paštas</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+            <label for="telefonas" class="form-label">Telefono numeris</label>
+            <input type="tel" name="telefonas" id="telefonas" class="form-control" placeholder="+370..." required>
         </div>
 
-      </div>
+        <!-- Adresas -->
+        <div class="col-md-12">
+            <label for="adresas" class="form-label">Adresas</label>
+            <input type="text" name="adresas" id="adresas" class="form-control" required>
+        </div>
+
+        <!-- SVARBU: Vertinimo klausimai su tiksliais ID -->
+        <div class="col-md-12 mt-4">
+            <h5>Įvertinkite mus (1-10):</h5>
+        </div>
+
+        <div class="col-md-4">
+            <label for="klausimas1" class="form-label">Dizainas</label>
+            <!-- ID privalo būti 'klausimas1' -->
+            <input type="number" id="klausimas1" class="form-control" min="1" max="10" value="10" required>
+        </div>
+
+        <div class="col-md-4">
+            <label for="klausimas2" class="form-label">Patogumas</label>
+            <!-- ID privalo būti 'klausimas2' -->
+            <input type="number" id="klausimas2" class="form-control" min="1" max="10" value="10" required>
+        </div>
+
+        <div class="col-md-4">
+            <label for="klausimas3" class="form-label">Aptarnavimas</label>
+            <!-- ID privalo būti 'klausimas3' -->
+            <select id="klausimas3" class="form-select">
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="5">5</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+
+        <!-- Submit mygtukas -->
+        <div class="col-md-12 text-center mt-4">
+            <button type="submit" class="btn btn-primary px-5 py-2">Siųsti (Submit)</button>
+        </div>
+    </div>
+</form>
+
+<!-- Rezultatų vieta -->
+<div id="formosRezultatai" class="mt-5 p-4 border rounded bg-light" style="display: none;">
+    <h3>Pateikti duomenys:</h3>
+    <div id="rezultatuTurinioVieta"></div>
+</div>
 
     </section><!-- /Contact Section -->
 
@@ -971,8 +825,11 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+
+  <!-- Sėkmės pranešimo elementas (iš pradžių paslėptas) -->
+<div id="sekmesPranesimas" class="success-popup">
+    <i class="bi bi-check-circle-fill"></i> Duomenys pateikti sėkmingai!
+</div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -988,6 +845,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
+ 
 
 </body>
 
