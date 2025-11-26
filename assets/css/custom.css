@@ -11,6 +11,22 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+#preloader:before {
+  animation: animate-preloader 3s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg);}
+  100% { transform: rotate(360deg); }
+}
+
+/* Reduced motion: disable animations for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  #preloader:before {
+    animation: none; /* stop spinning */
+  }
+}
 :root {
   --default-font: "Special Elite", "Special Elite", Arial, sans-serif;
   --heading-font: "Merriweather", "Georgia", serif;
@@ -20,21 +36,21 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #1f1f1f; /* Background color for the entire website, including individual sections */
-  --default-color: #ff0000; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ff5b5b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #e61e1e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #232323; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #310606; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --default-color: #ad5f5f; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #b46060; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #b36666; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #000000; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: rgba(236, 236, 236, 0.59);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #bd6161; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #393939; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #393939; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ececec; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #9c6d6d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -77,11 +93,47 @@ a:hover {
   text-decoration: none;
 }
 
-h1 { font-size: 2.6em; color: #ff0000}
-h2 { font-size: 2.6em; color: #e70000}
-h3 { font-size: 2.6em; color: #ff0000}
-h4 { font-size: 2.6em; color: #ff0000}
-h5 { font-size: 2.6em; color: #ff0000}
+.view-work-btn {
+    animation: bounceGlow 2s ease-in-out infinite;
+}
+
+/* Combined bounce + glow animation */
+@keyframes bounceGlow {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 0 10px rgba(255, 120, 120, 0.3);
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 0 25px rgba(255, 120, 120, 0.8);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 0 10px rgba(255, 120, 120, 0.3);
+    }
+}
+
+#preloader:before {
+  animation: animate-preloader 3s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Reduced motion: disable animations for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  #preloader:before {
+    animation: none; /* stop spinning */
+  }
+}
+
+h1 { font-size: 2.6em; color: #8d8383}
+h2 { font-size: 2.6em; color: #8d8383}
+h3 { font-size: 2.6em; color: #8d8383}
+h4 { font-size: 2.6em; color: #8d8383}
+h5 { font-size: 2.6em; color: #8d8383}
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
@@ -89,7 +141,7 @@ h6 {
 
 button,
 .btn {
-  background-color: #ffb703;          /* Ryškiai geltona – kontrastuoja su tamsiu fonu */
+  background-color: #797979;          /* Ryškiai geltona – kontrastuoja su tamsiu fonu */
   color: #1a1a1a;                     /* Tamsus tekstas – geras kontrastas */
   border: none;
   border-radius: 8px;
@@ -101,6 +153,8 @@ button,
   transition: all 0.3s ease;
   cursor: pointer;
 }
+
+
 
 button:hover,
 .btn:hover {
@@ -125,20 +179,50 @@ a {
 }
 
 a:hover {
-  color: #ff0000;                    
+  color: #8d8383;                    
   text-shadow: 0 0 6px rgba(144, 224, 239, 0.7);
 }
 
 a:active {
-  color: #ff0000;                     /* Tamsesnė mėlyna paspaudus */
+  color: #8d8383;                     /* Tamsesnė mėlyna paspaudus */
   text-shadow: none;
 }
+
+#preloader:before {
+  animation: animate-preloader 3s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Reduced motion: disable animations for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  #preloader:before {
+    animation: none; /* stop spinning */
+  }
+}
+
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 120, 120, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 120, 120, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 120, 120, 0.3);
+    }
+}
+
 
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
+  background: #8d8383;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -186,12 +270,14 @@ a:active {
   }
 }
 
+
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
   --background-color: #1b1b1b;
-  --contrast-color: #fa2323;
+  --contrast-color: #8d8383;
   color: var(--default-color);
   position: fixed;
   top: 0;
@@ -233,6 +319,18 @@ a:active {
 .header .social-links a:hover {
   color: var(--contrast-color);
   background: var(--accent-color);
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
 }
 
 @media (min-width: 1200px) {
@@ -281,7 +379,7 @@ nav ul {
 
   padding: 0;
   margin: 0;
-  background-color: #ff0000; /* tamsi, bet ne per tamsi raudona */
+  background-color: #8d8383; /* tamsi, bet ne per tamsi raudona */
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
@@ -304,7 +402,7 @@ nav ul li a {
 }
 
 nav ul li:hover {
-  background-color: #ff0000; /* ryškus raudonas hover */
+  background-color: #8d8383; /* ryškus raudonas hover */
   cursor: pointer;
 }
 
@@ -315,7 +413,7 @@ nav ul li:hover a {
 
 /* Jei nori išryškinti aktyvų meniu punktą */
 nav ul li.active {
-  background-color: #ff0000;
+  background-color: #8d8383;
   font-weight: 700;
   color: #000000;
   text-decoration: underline;
@@ -356,15 +454,15 @@ nav ul li.active {
 
 .navmenu a:hover,
 .navmenu .active {
-  background: linear-gradient(90deg, #ff1a1a 0%, #b30000 100%);
+  background: linear-gradient(90deg, #8d8383 0%, #b30000 100%);
   color: #fff;
-  border-color: #ff3333;
+  border-color: #8d8383;
   transform: translateX(8px);
   box-shadow: 0 0 18px rgba(255, 0, 0, 0.4);
 }
 
 .navmenu a .navicon {
-  color: #ff4d4d;
+  color: #8d8383;
   transition: color 0.3s ease;
 }
 
@@ -454,7 +552,7 @@ nav ul li.active {
   z-index: 999999;
   overflow: hidden;
   background: var(--background-color);
-  transition: all 0.6s ease-out;
+  transition: all 3s ease-out;
 }
 
 #preloader:before {
@@ -462,12 +560,12 @@ nav ul li.active {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ffffff;
+  border: 6px solid #f07373;
   border-color: var(--accent-color) transparent var(--accent-color) transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
+  animation: animate-preloader 3s linear infinite;
 }
 
 @keyframes animate-preloader {
@@ -487,8 +585,8 @@ nav ul li.active {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: radial-gradient(circle at 30% 30%, #ff1a1a, #990000);
-  color: #fff;
+  background: radial-gradient(circle at 30% 30%, #c0bdbd, #990000);
+  color: #e97474;
   font-size: 22px;
   width: 55px;
   height: 55px;
@@ -514,13 +612,13 @@ nav ul li.active {
 .scroll-top:hover {
   background: radial-gradient(circle at 70% 70%, #ff4d4d, #b30000);
   transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 0 35px rgba(255, 80, 80, 0.8);
+  box-shadow: 0 0 35px rgba(201, 199, 199, 0.8);
 }
 
 /* Active (paspaudus) efektas */
 .scroll-top:active {
   transform: translateY(2px) scale(0.95);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(197, 197, 197, 0.6);
 }
 
 
@@ -587,6 +685,22 @@ section > *:not(:last-child) {
   margin-bottom: 30px;
 }
 
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /*--------------------------------------------------------------
 # Global Section Titles
@@ -906,6 +1020,9 @@ ul.custom-list ul li::before {
   height: 400px;
 }
 
+/* --- ČIA BUVO DUBLIKATAI, DABAR TIK VIENAS TEISINGAS KODAS --- */
+
+/* Fonas už nuotraukos */
 .hero .hero-visual .profile-container .profile-background {
   position: absolute;
   top: 15px;
@@ -915,8 +1032,12 @@ ul.custom-list ul li::before {
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
   border-radius: 30px;
   z-index: 1;
+  /* Animacija */
+  animation: heroFloat 6s ease-in-out infinite;
+  animation-delay: 1s; 
 }
 
+/* Pati nuotrauka */
 .hero .hero-visual .profile-container .profile-image {
   position: relative;
   width: 100%;
@@ -924,30 +1045,36 @@ ul.custom-list ul li::before {
   object-fit: cover;
   border-radius: 30px;
   z-index: 2;
+  /* Animacija */
+  animation: heroFloat 6s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
 @keyframes floatIcon {
-
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-10px) rotate(5deg);
-  }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
 }
 
 @media (max-width: 992px) {
@@ -955,71 +1082,39 @@ ul.custom-list ul li::before {
     text-align: center;
     margin-bottom: 50px;
   }
-
-  .hero .hero-text h1 {
-    font-size: 56px;
-  }
-
-  .hero .hero-text h2 {
-    font-size: 28px;
-  }
-
-  .hero .hero-text .lead {
-    font-size: 20px;
-  }
-
-  .hero .hero-visual .profile-container {
-    width: 350px;
-    height: 350px;
-  }
+  .hero .hero-text h1 { font-size: 56px; }
+  .hero .hero-text h2 { font-size: 28px; }
+  .hero .hero-text .lead { font-size: 20px; }
+  .hero .hero-visual .profile-container { width: 350px; height: 350px; }
 }
 
 @media (max-width: 768px) {
-  .hero .hero-text h1 {
-    font-size: 42px;
-  }
-
-  .hero .hero-text h2 {
-    font-size: 24px;
-  }
-
-  .hero .hero-text .lead {
-    font-size: 18px;
-  }
-
-  .hero .hero-text .description {
-    font-size: 16px;
-  }
-
-  .hero .hero-actions {
-    justify-content: center;
-  }
-
-  .hero .hero-actions .btn {
-    padding: 12px 25px;
-    font-size: 14px;
-  }
-
-  .hero .hero-visual .profile-container {
-    width: 300px;
-    height: 300px;
-  }
-
-  .hero .background-elements .bg-circle.circle-1 {
-    width: 200px;
-    height: 200px;
-  }
-
-  .hero .background-elements .bg-circle.circle-2 {
-    width: 150px;
-    height: 150px;
-  }
-
-  .hero .background-elements .bg-circle.circle-3 {
-    width: 100px;
-    height: 100px;
+  .hero .hero-text h1 { font-size: 42px; }
+  .hero .hero-text h2 { font-size: 24px; }
+  .hero .hero-text .lead { font-size: 18px; }
+  .hero .hero-text .description { font-size: 16px; }
+  .hero .hero-actions { justify-content: center; }
+  .hero .hero-actions .btn { padding: 12px 25px; font-size: 14px; }
+  .hero .hero-visual .profile-container { width: 300px; height: 300px; }
+  .hero .background-elements .bg-circle.circle-1 { width: 200px; height: 200px; }
+  .hero .background-elements .bg-circle.circle-2 { width: 150px; height: 150px; }
+  .hero .background-elements .bg-circle.circle-3 { width: 100px; height: 100px; }
+  .contact-dot {
+    width: 60px;
+    height: 60px;
+    background: #b26267;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
   }
 }
+
+/* Pagrindinė nuotraukos animacija */
+@keyframes heroFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1865,6 +1960,46 @@ ul.custom-list ul li::before {
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
+.services {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  /* Jei reikia, pakoreguokite tarpus */
+  padding: 60px 0; 
+}
+
+/* --- ANIMUOTAS FONAS (::before) --- */
+/* Tai sukuria atskirą sluoksnį fonui, kad jis neužstotų teksto */
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #0f0b0b, #0c0707, #120c0c, #ae4141);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1; /* Svarbu: nustumia foną į apačią */
+}
+
+/* --- TEKSTO SPALVOS KEITIMAS --- */
+/* Priverčiame tekstą būti baltą, nes ant ryškaus gradiento tamsus tekstas nesimato */
+.services .service-header .service-intro .service-heading,
+.services .service-header .service-summary p,
+.services .service-card p {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Šešėlis geresniam skaitomumui */
+}
+
+/* Antraščių span elementai (akcentinė spalva) gali likti, bet galite pakeisti į baltą, jei nesiderina */
+.services .service-header .service-intro .service-heading span {
+    color: #ffffff; 
+    text-decoration: underline; /* Arba palikti accent-color, jei ji šviesi */
+}
+
+/* --- TURINIO STILIAI (Jūsų originalus kodas) --- */
 .services .service-header {
   margin-bottom: 60px;
 }
@@ -1874,7 +2009,6 @@ ul.custom-list ul li::before {
   margin-bottom: 0;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--heading-color);
 }
 
 .services .service-header .service-intro .service-heading div {
@@ -1884,7 +2018,7 @@ ul.custom-list ul li::before {
 
 .services .service-header .service-intro .service-heading span {
   display: block;
-  color: var(--accent-color);
+  /* color: var(--accent-color); -> Pakeista viršuje į baltą dėl matomumo */
 }
 
 @media (max-width: 992px) {
@@ -1902,15 +2036,15 @@ ul.custom-list ul li::before {
 
 .services .service-header .service-summary p {
   margin-bottom: 25px;
-  color: var(--default-color);
+  /* color: var(--default-color); -> Pakeista viršuje į baltą */
 }
 
 .services .service-header .service-summary .service-btn {
   display: inline-flex;
   align-items: center;
   padding: 12px 30px;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: #ffffff; /* Mygtukas baltas */
+  color: #e73c7e; /* Tekstas spalvotas */
   border-radius: 4px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -1922,8 +2056,8 @@ ul.custom-list ul li::before {
 }
 
 .services .service-header .service-summary .service-btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
-  color: var(--contrast-color);
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 .services .service-header .service-summary .service-btn:hover i {
@@ -1936,10 +2070,14 @@ ul.custom-list ul li::before {
   }
 }
 
+/* --- KORTELIŲ STILIUS --- */
+/* Kortelėms reikia fono, kad tekstas jose būtų įskaitomas */
 .services .service-card {
-  padding: 40px 40px 40px 40px;
+  padding: 40px;
   margin-bottom: 30px;
-  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: rgba(255, 255, 255, 0.9); /* Pusiau permatomas baltas fonas kortelėms */
+  border-radius: 8px; /* Šiek tiek apvalinti kampai */
+  border: none;
   transition: all 0.3s ease;
 }
 
@@ -1967,7 +2105,7 @@ ul.custom-list ul li::before {
 }
 
 .services .service-card h3 a {
-  color: var(--heading-color);
+  color: var(--heading-color); /* Kortelės viduje tekstas tamsus */
   transition: color 0.3s ease;
 }
 
@@ -1980,9 +2118,10 @@ ul.custom-list ul li::before {
 }
 
 .services .service-card p {
-  color: var(--default-color);
+  color: var(--default-color) !important; /* Kortelės viduje tekstas tamsus */
   transition: color 0.3s ease;
   margin-bottom: 0;
+  text-shadow: none;
 }
 
 .services .service-card .card-action {
@@ -2011,41 +2150,14 @@ ul.custom-list ul li::before {
   transform: rotate(45deg);
 }
 
-.services .service-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--surface-color);
-  clip-path: polygon(70% 0, 100% 30%, 100% 100%, 0 100%, 0 0);
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
 .services .service-card:hover {
-  border-color: transparent;
-}
-
-.services .service-card:hover::before {
-  opacity: 1;
-  visibility: visible;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  transform: translateY(-5px); /* Pakelia kortelę */
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .services .service-card:hover h3 a {
   color: var(--accent-color);
-}
-
-.services .service-card:hover h3 a:hover {
-  color: var(--accent-color);
-}
-
-.services .service-card:hover p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
 .services .service-card:hover .card-action {
@@ -2062,21 +2174,29 @@ ul.custom-list ul li::before {
   .services .service-card {
     padding: 150px 25px 25px;
   }
-
   .services .service-card h3 {
     font-size: 24px;
   }
-
   .services .service-card .service-icon {
     position: absolute;
     top: 40px;
     left: 25px;
   }
-}
-
-@media (max-width: 768px) {
   .services {
     padding: 70px 0 50px;
+  }
+}
+
+/* --- ANIMACIJA --- */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -2796,7 +2916,7 @@ ul.custom-list > li {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
-  color: #ff3333;
+  color: #ff8080;
   font-size: 1em;
   line-height: 1.6;
   transition: color 0.3s;
@@ -2807,7 +2927,7 @@ ul.custom-list > li::before {
   position: absolute;
   left: 0;
   top: 0;
-  color: #ff3333;
+  color: #ff8080;
   font-size: 1.2em;
   transition: transform 0.2s, color 0.2s;
 }
@@ -2825,7 +2945,7 @@ ul.custom-list ul {
 
 ul.custom-list ul li::before {
   content: "–";
-  color: #ff9999;
+  color: #ff8080;
 }
 
 /* =============================== */
@@ -2840,13 +2960,13 @@ table.service-table {
 
 table.service-table th,
 table.service-table td {
-  border: 1px solid #ff3333;
+  border: 1px solid #ff8080;
   padding: 12px 15px;
   text-align: center;
 }
 
 table.service-table th {
-  background-color: #ff3333;
+  background-color: #ff8080;
   color: #fff;
   font-weight: 700;
   font-size: 1.1em;
@@ -2868,3 +2988,76 @@ table.service-table tbody tr:hover {
   /* Add your styles here */
   
 }
+@keyframes contactFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Priverstinė animacija --- */
+
+/* Apibrėžiame judėjimą */
+@keyframes heroFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); } /* Kilsteli aukštyn */
+  100% { transform: translateY(0); }
+}
+
+/* Pritaikome fonui */
+.profile-background {
+  animation: heroFloat 6s ease-in-out infinite !important;
+  animation-delay: 1s; /* Vėluoja, kad būtų 3D efektas */
+}
+
+/* Pritaikome nuotraukai */
+.profile-image {
+  animation: heroFloat 6s ease-in-out infinite !important;
+  /* Papildomas stilius, kad matytųsi, jog kodas veikia */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important; 
+}
+
+/* --- Continuously Rotating Button --- */
+
+/* 1. Define the animation */
+@keyframes buttonSpin {
+  0% { transform: perspective(500px) rotateY(0deg); }
+  50% { transform: perspective(500px) rotateY(180deg); }
+  100% { transform: perspective(500px) rotateY(360deg); }
+}
+
+/* 2. Apply it to the "Let's Talk" button */
+.hero .hero-actions .btn:last-child {
+  /* spin every 5 seconds, infinitely */
+  animation: buttonSpin 5s linear infinite !important;
+}
+
+/* 3. Pause it when user hovers so they can click it */
+.hero .hero-actions .btn:last-child:hover {
+  animation-play-state: paused !important;
+  background-color: var(--accent-color) !important;
+}
+    .success-popup {
+        display: none; /* Paslėptas pagal nutylėjimą */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #198754; /* Bootstrap žalia */
+        color: white;
+        padding: 15px 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 9999;
+        font-weight: 500;
+        animation: slideIn 0.5s ease-out;
+    }
+
+    /* Animacija įvažiavimui */
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
