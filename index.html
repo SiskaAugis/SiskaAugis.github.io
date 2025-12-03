@@ -843,11 +843,59 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+<!-- Nauja Žaidimo Sekcija (1 punktas) -->
+<section id="memory-game">
+    <h2>Mano Žaidimas</h2>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Valdymo pultas: Sudėtingumo pasirinkimas ir Mygtukai (1a, 1d) -->
+    <div id="game-controls">
+        <div id="difficulty-selection">
+            <strong>Sudėtingumo Lygis:</strong>
+            <label>
+                <input type="radio" name="difficulty" value="easy" checked>
+                Lengvas (4x3)
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="hard">
+                Sunkus (6x4)
+            </label>
+        </div>
+
+        <div id="control-buttons">
+            <button id="start-btn">Start</button>
+            <button id="reset-btn">Atnaujinti</button>
+        </div>
+    </div>
+
+    <!-- Statistika ir Laimėjimo pranešimas (1c, 1e, 6) -->
+    <div id="game-info">
+        <div id="stats">
+            <p>Ėjimai: <span id="moves-count">0</span></p>
+            <p>Rastos poros: <span id="matched-count">0</span></p>
+            <p>Geriausias rezultatas: <span id="best-score-moves">--</span></p>
+            <p>Laikas: <span id="time-count">00:00</span></p> 
+        </div>
+        <div id="win-message" class="hidden"></div>
+    </div>
+
+    <!-- Žaidimų Lenta (Kortelių tinklelis) (1b) -->
+    <div id="game-board">
+        <p class="placeholder-text">Pasirinkite sudėtingumo lygį ir paspauskite "Start".</p>
+    </div>
+</section>
+
+</html>
+
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/custom.js"></script>
  
 
+
+  
 </body>
 
-</html>
