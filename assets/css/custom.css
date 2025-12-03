@@ -3061,3 +3061,135 @@ table.service-table tbody tr:hover {
         from { transform: translateX(100%); opacity: 0; }
         to { transform: translateX(0); opacity: 1; }
     }
+
+#memory-game {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif; /* Pritaikykite prie savo svetainės šrifto */
+    text-align: center;
+}
+
+#game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #b71f1f;
+    border-radius: 8px;
+    background-color: #170a0a;
+}
+
+#difficulty-selection label {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+#stats {
+    text-align: left;
+    min-width: 200px;
+    font-size: 1.1em;
+}
+
+#win-message {
+    flex-grow: 1;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: green;
+    padding: 10px;
+    background-color: #e6ffe6;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: none; /* JS valdys rodymą */
+}
+
+#win-message:not(.hidden) {
+    display: block;
+}
+
+/* 10b: Kortelių tinklelis */
+#game-board {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    perspective: 1000px; /* Sukuria 3D efektą kortelės apvertimui */
+}
+
+.card {
+    background: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 8px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    height: 100px; /* Fiksuotas kortelės aukštis */
+    width: 100%;
+}
+
+/* Vidinis kortelės turinys (priekis ir galas) */
+.card-face, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+    border-radius: 6px;
+}
+
+/* Kortelės galas (paslėptas turinys) */
+.card-face {
+    background-color: #871919; /* Mėlyna spalva */
+    transform: rotateY(180deg);
+}
+
+/* Kortelės priekis (užpakalinė dalis) */
+.card-back {
+    background-color: #9a1b1b; /* Tamsi spalva */
+    color: rgb(109, 6, 6);
+    font-size: 1.5em;
+    line-height: 1;
+    transform: rotateY(0deg);
+}
+
+/* Kortelės apvertimo būsena (4a) */
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Sutapusi kortelė (5a) */
+.card.matched {
+    cursor: default;
+    opacity: 0.6;
+    border-color: green;
+}
+
+.card.matched .card-face {
+    background-color: #4CAF50; /* Žalia spalva */
+}
+
+/* Placeholder teksto stilius prieš pradedant žaidimą */
+.placeholder-text {
+    grid-column: 1 / -1;
+    padding: 50px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Naudojant Font Awesome ikonoms (įsitikinkite, kad esate įtraukę FA biblioteką) */
+.fas {
+    font-size: 1em;
+}
